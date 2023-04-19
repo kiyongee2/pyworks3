@@ -18,3 +18,5 @@ if age >= 20 and age <= 65:
         print("금요일 접종")
 else:
     print("하반기 일정 확인")
+
+
