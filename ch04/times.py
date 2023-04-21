@@ -14,6 +14,7 @@ def times(x):
             print(i, end=' ')
     print(f'\n배수의 개수 : {count}')
 """
+"""
 def times(x):
     global count  # 전역 변수
     for i in range(1, 101):
@@ -24,3 +25,15 @@ def times(x):
 count = 0
 times(3)
 print(f'\n배수의 개수 : {count}')
+"""
+
+def times(x):
+    for i in range(1, 101):
+        j = i * x
+        if j > 100:
+            print(i-1)
+            break
+        print(j, end=' ')
+
+
+times(3)
