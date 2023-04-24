@@ -23,7 +23,6 @@ t.down() # 펜 내리기
 polygon2(3, 100)
 polygon2(5, 100)
 
-
 """
 for i in range(3):
     t.forward(100)
