@@ -26,11 +26,18 @@ soup = BeautifulSoup(html_str, 'html.parser')
 first_ul = soup.find('ul', attrs={'class':'item'})
 # print(first_ul)
 # print(first_ul.text)  #태그없이 텍스트 출력
+first_li = soup.find('li') # 첫번째 li만 찾음
+# print(first_li.text)
 
 all_li = first_ul.findAll('li')
 print(all_li)
 print(all_li[1])
 print(all_li[1].text)
+
+for li in all_li:
+    # print(li)
+    print(li.text)
+
 
 
 

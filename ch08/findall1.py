@@ -1,5 +1,4 @@
 import re
-
 """
 str = "123?45yy7890 hi 999 hello"
 
@@ -17,7 +16,6 @@ print(m2)
 """
 
 # '*', '+'의 차이
-"""
 p = re.compile('ca*t')  # 앞 문자가 0번이상 반복(즉 없어도 찾음)
 m1 = re.findall(p, 'caat')
 print(m1)
@@ -29,7 +27,7 @@ m3 = re.findall(p2, 'caat')
 print(m3)
 m4 = re.findall(p2, 'ct')
 print(m4)
-"""
+
 
 # 점(.)은 임의의 문자 - 소괄호는 서브클래스(그룹)
 str = "abcd<hr>Thank you"
