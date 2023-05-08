@@ -26,16 +26,17 @@ nav{float: right; width: 70%; height: 100px;}
 
 /* main 스타일 */
 #main-pic img{width: 100%; height: 240px;}
-#main{clear: both; margin: 50px auto; text-align: center;}
+#main{clear: both; margin: 30px auto 100px; text-align: center;}
+#main h2{font-size: 1.2em;}
 #main .img1{margin: 20px auto; text-align: center;}
-#main .img1 img{border-radius: 5px;}
+#main .img1 img{border-radius: 5px; width: 350px;}
 
 /* footer 스타일 */
 footer{height: 80px; border-top: 2px solid #222;}
-#bottomMenu{margin: 10px 10px 10px 40px;}
+#bottomMenu{margin: 10px 10px 10px 20px;}
 #bottomMenu li{display: inline-block; margin: 10px 0; padding: 0 10px;
     border-right: 1px solid #ccc;}
-#bottomMenu li a{color: #444;}
+#bottomMenu li a{color: #444; font-size: 0.9em;}
 #bottomMenu li:last-child{border: none;}
 
 /* memberlist 스타일 */
