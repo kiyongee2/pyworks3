@@ -19,8 +19,11 @@ def click():
     
     output.delete(0.0, END)
     # output.insert(END, winner) # list 대신 str로 출력 요망
-    for i in winner:
-        output.insert(END, i + ' ')
+    # for i in winner:
+    #     output.insert(END, i + ' ')
+
+    # 문자열 연결하기 - join()
+    output.insert(END, ' '.join(winner))
 
     # 구현 2. randint() 사용
     '''

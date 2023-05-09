@@ -39,14 +39,6 @@ footer{height: 80px; border-top: 2px solid #222;}
 #bottomMenu li a{color: #444; font-size: 0.9em;}
 #bottomMenu li:last-child{border: none;}
 
-/* memberlist 스타일 */
-#memberlist{margin: 40px auto;}
-#memberlist table{width: 700px; margin: 30px auto;}
-#memberlist table, th, td{border: 1px solid #ccc;
-    border-collapse: collapse; text-align: center;}
-#memberlist table th, td{padding: 10px 0;}
-#memberlist table thead{background: #eee;}
-
 /* register 스타일 */
 #register{width: 400px; margin: 30px auto 100px;}
 #register form{margin: 20px auto;}
@@ -59,6 +51,14 @@ footer{height: 80px; border-top: 2px solid #222;}
 #register form label.radio{width: 40px; padding-left: 0; margin-right: 15px;}
 #register form li.button{clear: both; padding-top: 30px; margin-left: 150px;}
 #register form input[type='button'],input[type='reset']{width: 80px; height: 30px}
+
+/* memberlist 스타일 */
+#memberlist{width: 450px; margin: 40px auto 100px;}
+#memberlist table{width: 450px; margin: 30px auto;}
+#memberlist table, th, td{border: 1px solid #ccc;
+    border-collapse: collapse; text-align: center;}
+#memberlist table th, td{padding: 10px 0; font-size: 0.9em;}
+#memberlist table thead{background: #eee;}
 
 /* login 스타일 */
 #login {width: 400px; margin: 30px auto 100px;}
@@ -92,6 +92,10 @@ footer{height: 80px; border-top: 2px solid #222;}
     #register form label{width: 120px; float: left; padding-left: 20px;
           margin-right: 10px;}
 
+    /* memberlist 스타일 */
+    #memberlist{width: 550px; margin: 40px auto 100px;}
+    #memberlist table{width: 550px; margin: 30px auto;}
+
     /* login 스타일 */
     #login {width: 440px; margin: 30px auto 100px;}
     #login form{margin: 30px auto;}
@@ -122,6 +126,10 @@ footer{height: 80px; border-top: 2px solid #222;}
     #register form ul li{margin: 30px;}
     #register form label{width: 120px; float: left; padding-left: 30px;
         margin-right: 20px;}
+
+    /* memberlist 스타일 */
+    #memberlist{width: 600px; margin: 40px auto 100px;}
+    #memberlist table{width: 600px; margin: 30px auto;}
 
     /* login 스타일 */
     #login {width: 480px; margin: 30px auto 100px;}
