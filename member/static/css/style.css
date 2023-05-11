@@ -77,7 +77,7 @@ footer{height: 80px; border-top: 2px solid #222;}
 #boardlist{width: 450px; margin: 40px auto 100px;}
 #boardlist table{width: 450px; margin: 30px auto;}
 #boardlist table, th, td{border: 1px solid #ccc; border-collapse: collapse;}
-#boardlist table th, td{padding: 10px 5px; font-size: 0.8em;}
+#boardlist table th, td{padding: 10px 5px; font-size: 0.6em;}
 #boardlist table td:nth-of-type(2){text-align: left;}
 #boardlist table thead{background: #eee;}
 #boardlist .btnWrite{text-align: right; margin-right: 10px;}
@@ -140,6 +140,7 @@ footer{height: 80px; border-top: 2px solid #222;}
     /* boardlist 스타일 */
     #boardlist{width: 550px; margin: 40px auto 100px;}
     #boardlist table{width: 550px; margin: 30px auto;}
+    #boardlist table th, td{padding: 10px 5px; font-size: 0.8em;}
 
     /* writing 스타일 */
     #writing{width: 550px; margin: 40px auto 100px;}
