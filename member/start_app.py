@@ -148,4 +148,31 @@ def delete(bno):
     conn.close()
     return redirect(url_for('boardlist'))
 
+# 게시글 수정
+@app.route('/update/<int:bno>', methods=['GET', 'POST'])
+def update(bno):
+    if request.method == "POST":
+        # 수정한 입력 내용을 board 테이블에 저장
+        title = request.form['title']
+        content = request.form['content']
+
+        # DB에 저장
+        conn = getconn()
+        cursor = conn.cursor()
+        sql = f"UPDATE board SET title = '{title}', content = '{content}' " \
+              f"WHERE bno = {bno}"
+        cursor.execute(sql)
+        conn.commit()
+        conn.close()
+        return redirect(url_for('detail', bno=bno)) #상세보기(글번호 명시)
+    else:
+        # 수정할 글(board)을 db에 가져오기
+        conn = getconn()
+        cursor = conn.cursor()
+        sql = f"SELECT * FROM board WHERE bno = {bno}"
+        cursor.execute(sql)
+        board = cursor.fetchone()  #게시글 1개 반환받음
+        conn.close()
+        return render_template('update.html', board=board)
+
 app.run()
