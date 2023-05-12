@@ -109,8 +109,8 @@ def boardlist():
 def writing():
     if request.method == 'POST':
         # 입력된 제목,글내용을 가져와서 DB에 저장
-        title = request.form['title']
-        content = request.form['content']
+        title = request.form['title'].replace("'", "''")
+        content = request.form['content'].replace("'", "''")
         # userid : session 이름을 가져옴
         memberid = session.get('userid')
 
@@ -134,6 +134,13 @@ def detail(bno):  #매개변수로 bno 설정
     sql = f"SELECT * FROM board WHERE bno = {bno}"
     cursor.execute(sql)
     board = cursor.fetchone()  # 게시글 1개 가져옴
+
+    # 조회수 증가
+    hit = board[4]
+    sql = f"UPDATE board SET hit = {hit + 1} WHERE bno = {bno}"
+    cursor.execute(sql)
+    conn.commit()
+    conn.close()
     return render_template('detail.html', board=board)
 
 # 게시글 삭제
@@ -153,8 +160,8 @@ def delete(bno):
 def update(bno):
     if request.method == "POST":
         # 수정한 입력 내용을 board 테이블에 저장
-        title = request.form['title']
-        content = request.form['content']
+        title = request.form['title'].replace("'","''")
+        content = request.form['content'].replace("'","''")
 
         # DB에 저장
         conn = getconn()
