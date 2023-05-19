@@ -24,18 +24,18 @@ i=1(2행) j=1 a[1] > a[2] False 5, 33, 12, 60, 24, 97
          j=4 a[4] > a[5] False 5, 12, 33, 24, 60, 97
 i=2(3행) j=2 a[2] > a[3] True 5, 12, 24, 33, 60, 97
 '''
-print(a)
+# print(a)
 
 """
 a.reverse() #거꾸로 배치
 print(a)
+"""
 
 a.sort()  # 오름차순
 print(a)
 
 a.sort(reverse=True) # 내림차순
 print(a)
-"""
 
 
 
