@@ -11,6 +11,18 @@ words = ['dog', 'cat', 'monkey', 'chicken', 'frog', 'horse']
 lives_remaining = 10   # 남은 기회(전역 변수)
 guessed_letters = ''   # 추측된 단어를 모두 저장할 변수
 
+def play():
+    word = pick_a_word()
+    while True:
+        guess = get_guess(word)
+        if process_guess(guess, word):  # 주측해서 맞췄을때
+            print("You win! Well done!")
+            break
+        if lives_remaining == 0:
+            print("You are Hung")
+            print("The word was: " + word)
+            break
+
 def pick_a_word():
     word = random.choice(words)
     return word
@@ -41,15 +53,4 @@ def process_guess(guess, word):
         return True    # print("You win! Well done!")를 즉시 실행
     return False  # True를 반환하면 바로 종료
 
-def play():
-    word = pick_a_word()
-    while True:
-        guess = get_guess(word)
-        if process_guess(guess, word):  # 주측해서 맞췄을때
-            print("You win! Well done!")
-            break
-        if lives_remaining == 0:
-            print("You are Hung")
-            print("The word was: " + word)
-            break
 play()
